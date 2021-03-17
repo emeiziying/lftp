@@ -1,5 +1,6 @@
-FROM alpine:latest
+FROM registry.cn-beijing.aliyuncs.com/rdc-builds/base:1.0   
 
-RUN apk --no-cache add lftp ca-certificates openssh
+LABEL maintainer="dzq1007650105@gmail.com"
 
-ENTRYPOINT [ "/usr/bin/lftp" ]
+RUN apt-get update
+RUN apt-get -y install lftp
