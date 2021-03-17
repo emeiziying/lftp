@@ -11,5 +11,7 @@ docker push registry.cn-wulanchabu.aliyuncs.com/test_quan/lftp:latest
 
 上传文件
 ```
-lftp -e "mirror -R /{dir}/ /{remote_dir}; exit" -u {user},{password} {host}
+wget --no-check-certificate -O file.tgz "${url}"
+tar zxvf file.tgz -C /${dir}
+lftp -e "mirror -R /${dir}/ /${remote_dir}; exit" -u ${user},${password} ${host}
 ```
