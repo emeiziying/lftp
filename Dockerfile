@@ -4,3 +4,4 @@ LABEL maintainer="dzq1007650105@gmail.com"
 
 RUN apt-get update
 RUN apt-get -y install lftp
+RUN mkdir sweet7
